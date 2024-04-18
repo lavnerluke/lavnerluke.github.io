@@ -4,7 +4,12 @@
         <title>Lavner Demo</title>
     </head>
     <body>
-        <h1>Heading 1</h1>
-        <p>Paragraph 1</p>
+        <ul>
+            {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
     </body>
 </html>
